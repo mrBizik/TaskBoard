@@ -5,13 +5,15 @@ Ext.define('TaskBoard.Application', {
 	defaultToken: 'homeview',
 
 	launch: function () {
-		// Ext.ariaWarn = Ext.emptyFn
-		// Ext.getBody().removeCls('launching')
+		Ext.ariaWarn = Ext.emptyFn
+		Ext.getBody().removeCls('launching')
 		const elem = document.getElementById("splash")
 		elem.parentNode.removeChild(elem)
 
-		// const whichView = 'mainview';
-		// Ext.create({xtype: whichView, plugins: 'viewport'});
+		Ext.create({
+			xtype: 'mainview',
+			plugins: 'viewport'
+		});
 	},
 
 	onAppUpdate: function () {

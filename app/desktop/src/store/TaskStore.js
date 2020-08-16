@@ -1,15 +1,15 @@
 /**
  * Стор, получающий массив тикетов
  */
-Ext.define('TestTask.store.TaskStore', {
+Ext.define('TaskBoard.store.TaskStore', {
     extend: 'Ext.data.Store',
     alias: 'store.taskstore',
-    model: 'TestTask.model.Task',
+    model: 'TaskBoard.model.Task',
 	proxy: {
 		type: 'ajax',
+		url: '/resources/desktop/tikets.json',
 		reader: {
             type: 'json',
-            url: '/resources/desktop/tikets.json',
 			rootProperty: 'items'
 		}
 	}
