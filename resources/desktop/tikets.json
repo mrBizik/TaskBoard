@@ -1,0 +1,76 @@
+{
+    "items": [
+        {
+            "id": "TSK-0001",
+            "name": "Task 1",
+            "firstName": "baturin",
+            "secondName": "ilya",
+            "status": "PLAN",
+            "priority": "SHOULD"
+        },
+        {
+            "id": "TSK-0002",
+            "name": "Task 1",
+            "firstName": "baturin",
+            "secondName": "ilya",
+            "status": "IN PROGRESS",
+            "priority": "COULD"
+        },
+        {
+            "id": "TSK-0003",
+            "name": "Task 1",
+            "firstName": "baturin",
+            "secondName": "ilya",
+            "status": "TESTING",
+            "priority": "MUST"
+        },
+        {
+            "id": "TSK-0004",
+            "name": "Task 1",
+            "firstName": "baturin",
+            "secondName": "ilya",
+            "status": "DONE",
+            "priority": "MUST"
+        },
+        {
+            "id": "TSK-0005",
+            "name": "Task 1",
+            "firstName": "ivanov",
+            "secondName": "ilya",
+            "status": "PLAN",
+            "priority": "MUST"
+        },
+        {
+            "id": "TSK-0006",
+            "name": "Task 1",
+            "firstName": "ivanov",
+            "secondName": "ilya",
+            "status": "IN PROGRESS",
+            "priority": "SHOULD"
+        },
+        {
+            "id": "TSK-0007",
+            "name": "Task 1",
+            "firstName": "ivanov",
+            "secondName": "ilya",
+            "status": "TESTING",
+            "priority": "MUST"
+        },
+        {
+            "id": "TSK-0008",
+            "name": "Task 1",
+            "firstName": "ivanov",
+            "secondName": "ilya",
+            "status": "DONE",
+            "priority": "COULD"
+        },
+        {
+            "id": "TSK-0009",
+            "name": "Task 1",
+            "firstName": "baturin",
+            "secondName": "ilya",
+            "status": "DONE",
+            "priority": "COULD"
+        }
+    ]
+}
