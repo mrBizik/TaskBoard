@@ -20,30 +20,13 @@ Ext.define('TaskBoard.view.main.MainView', {
       weight: -1,
       items: [
         {
-          xtype: 'panel',
-          title: 'Plan',
-          cls: 'boardview-task-group',
-          items: [
-              {
-                  xtype: 'dataview',
-                  height: '100%',
-                  itemTpl: new Ext.XTemplate(
-                      '<div class="boardview-item-task-wrap">',
-                      '<div class="item-task-base-info">',
-                      '<div class="item-task-id">{id}</div>',
-                      '<div class="item-task-name">{name}</div>',
-                      '</div>',
-                      '<div class="item-task-status-info">',
-                      '<div class="item-task-user-name">Owner: {firstName} {secondName}</div>',
-                      '<div class="item-task-priority">Priority: {priority}</div>',
-                      '</div>',
-                      '</div>',
-                  ),
-                  bind: {
-                      store: '{planTasks}',
-                  }
-              },
-          ]
+          xtype: 'boardcolumn',
+          bind: {
+            store: '{planTasks}',
+          },
+          listeners: {
+            select: 'onSelectTask',
+          },
         },
       ],
     },
