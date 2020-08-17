@@ -7,4 +7,10 @@ Ext.define('TaskBoard.view.board.column.ColumnController', {
         const view = me.getView();
         view.fireEvent('select', view, record);
     },
+
+    onTiketDrop: function(dataview, data) {
+        const store = dataview.getStore();
+        const status = store.getStatus();
+        data.records.forEach(record => record.set('status', status));
+    },
   });

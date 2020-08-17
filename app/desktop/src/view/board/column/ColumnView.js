@@ -27,8 +27,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
 
     privates: {
         getTiketView: function() {
-            return this.down();
-            // return this.getReference('tiketview');
+            return this.getReferences()['tiketview'];
         },
 
         createDataViewConfig: function(store) {
@@ -36,6 +35,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
                 xtype: 'dataview',
                 height: '100%',
                 reference: 'tiketview',
+                plugins: ['boardcolumndragdrop'],
                 itemTpl: new Ext.XTemplate(
                     '<div class="boardview-item-task-wrap">',
                     '<div class="item-task-base-info">',
@@ -51,6 +51,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
                 store: store,
                 listeners: {
                     select: 'onSelectRecord',
+                    tiketdrop: 'onTiketDrop'
                 },
             };
         },

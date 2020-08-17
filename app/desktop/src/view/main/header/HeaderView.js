@@ -3,9 +3,4 @@ Ext.define('TaskBoard.view.main.header.HeaderView', {
   height: 50,
   xtype: 'headerview',
   cls: 'headerview',
-  defaults: {
-    ui: 'toolbutton-toolbar',
-    handler: 'onToolButtonClicked'
-  },
-  items: [],
 });
