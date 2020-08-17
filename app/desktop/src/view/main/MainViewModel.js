@@ -11,5 +11,20 @@ Ext.define('TaskBoard.view.main.MainViewModel', {
 			source: '{allTasks}',
 			status: 'PLAN',
 		},
+		inProgressTasks: {
+			type: 'statustaskstore',
+			source: '{allTasks}',
+			status: 'IN PROGRESS',
+		},
+		testingTasks: {
+			type: 'statustaskstore',
+			source: '{allTasks}',
+			status: 'TESTING',
+		},
+		doneTasks: {
+			type: 'statustaskstore',
+			source: '{allTasks}',
+			status: 'DONE',
+		},
 	}
 });

@@ -16,18 +16,59 @@ Ext.define('TaskBoard.view.main.MainView', {
     },
     {
       xtype: 'contentview',
+      reference: 'contentview',
       region: 'center',
       weight: -1,
       items: [
         {
-          xtype: 'boardcolumn',
-          bind: {
-            store: '{planTasks}',
+          xtype: 'container',
+          layout: {
+            type: 'hbox',
+            align: 'stretch',
           },
-          listeners: {
-            select: 'onSelectTask',
+          defaults: {
+            flex: 1,
+            margin: 5,
           },
-        },
+          items: [
+            {
+              xtype: 'boardcolumn',
+              bind: {
+                store: '{planTasks}',
+              },
+              listeners: {
+                select: 'onSelectTask',
+              },
+            },
+            {
+              xtype: 'boardcolumn',
+              bind: {
+                store: '{inProgressTasks}',
+              },
+              listeners: {
+                select: 'onSelectTask',
+              },
+            },
+            {
+              xtype: 'boardcolumn',
+              bind: {
+                store: '{testingTasks}',
+              },
+              listeners: {
+                select: 'onSelectTask',
+              },
+            },
+            {
+              xtype: 'boardcolumn',
+              bind: {
+                store: '{doneTasks}',
+              },
+              listeners: {
+                select: 'onSelectTask',
+              },
+            },
+          ],
+        }
       ],
     },
     {
