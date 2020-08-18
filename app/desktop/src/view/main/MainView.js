@@ -29,6 +29,8 @@ Ext.define('TaskBoard.view.main.MainView', {
           defaults: {
             flex: 1,
             margin: 5,
+            scrollable: 'y',
+            height: 600,
           },
           items: [
             {
@@ -68,6 +70,12 @@ Ext.define('TaskBoard.view.main.MainView', {
               },
             },
           ],
+        },
+        {
+          xtype: 'tiketview',
+          bind: {
+            tiket: '{selectedTask}',
+          },
         }
       ],
     },

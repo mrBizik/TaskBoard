@@ -3,6 +3,6 @@ Ext.define('TaskBoard.view.main.MainViewController', {
   alias: 'controller.mainviewcontroller',
 
   onSelectTask: function(view, record) {
-    console.log(record);
+    this.getViewModel().set('selectedTask', record);
   },
 });

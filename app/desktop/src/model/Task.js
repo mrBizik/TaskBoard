@@ -40,6 +40,13 @@ Ext.define('TaskBoard.model.Task', {
                 return priorityOrder.indexOf(data.priority);
             }
         },
+        {
+            name: 'dateString',
+            depends: 'date',
+            calculate: function(data) {
+                return Ext.Date.format(data.date, 'Y-m-d H:i');
+            }
+        },
     ],
     validators: {
         id: 'presence',

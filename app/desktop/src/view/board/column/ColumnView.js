@@ -3,6 +3,9 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
     xtype: 'boardcolumn',
     cls: 'board-columnview',
     controller: 'boardcolumncontroller',
+    requires: [
+        'Ext.XTemplate',
+    ],
     config: {
         store: null,
     },
@@ -41,10 +44,6 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
                     '<div class="item-task-base-info">',
                     '<div class="item-task-id">{id}</div>',
                     '<div class="item-task-name">{name}</div>',
-                    '</div>',
-                    '<div class="item-task-status-info">',
-                    '<div class="item-task-user-name">Owner: {firstName} {secondName}</div>',
-                    '<div class="item-task-priority">Priority: {priority}</div>',
                     '</div>',
                     '</div>',
                 ),
