@@ -31,7 +31,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
     deselectAll: function() {
         const me = this;
         const tiketView = me.getTiketView();
-        tiketView.deselect(tiketView.getStore().getRange());
+        tiketView.getSelectionModel().deselectAll();
     },
 
     privates: {
