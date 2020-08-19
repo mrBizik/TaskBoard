@@ -3,6 +3,12 @@ Ext.define('TaskBoard.view.main.MainViewController', {
   alias: 'controller.mainviewcontroller',
 
   onSelectTask: function(view, record) {
-    this.getViewModel().set('selectedTask', record);
+    const me = this;
+    me.getView().getBoard().items.items.forEach((column) => {
+      if (view !== column) {
+        column.deselectAll();
+      }
+    });
+    me.getViewModel().set('selectedTask', record);
   },
 });

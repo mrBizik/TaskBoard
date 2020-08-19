@@ -32,6 +32,7 @@ Ext.define('TaskBoard.view.main.MainView', {
             scrollable: 'y',
             height: 600,
           },
+          reference: 'board',
           items: [
             {
               xtype: 'boardcolumn',
@@ -87,4 +88,9 @@ Ext.define('TaskBoard.view.main.MainView', {
       weight: -2
     },
   ],
+
+  getBoard: function() {
+    const contentview = this.getReferences()['contentview'];
+    return contentview.down();
+  }
 });

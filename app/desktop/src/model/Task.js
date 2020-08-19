@@ -38,14 +38,17 @@ Ext.define('TaskBoard.model.Task', {
             calculate: function(data) {
                 const priorityOrder = ['MUST', 'SHOULD', 'COULD'];
                 return priorityOrder.indexOf(data.priority);
-            }
+            },
+        },
+        {
+            name: 'priorityType',
+            depends: 'priority',
+            calculate: (data)  => data.priority.toLowerCase(),
         },
         {
             name: 'dateString',
             depends: 'date',
-            calculate: function(data) {
-                return Ext.Date.format(data.date, 'Y-m-d H:i');
-            }
+            calculate: (data) => Ext.Date.format(data.date, 'Y-m-d H:i'),
         },
     ],
     validators: {

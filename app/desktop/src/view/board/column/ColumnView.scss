@@ -1,0 +1,24 @@
+.task-priority-must {
+    background-color: red;
+}
+
+.task-priority-should {
+    background-color: yellow;
+}
+
+.task-priority-could {
+    background-color: green;
+}
+
+.boardview-item-task-wrap {
+    border-radius: 5px;
+}
+
+.item-task-base-info {
+    padding: 5px;
+    margin: 5px;
+}
+
+.task-selected > .boardview-item-task-wrap {
+    background-color: $base-color !important;
+}
