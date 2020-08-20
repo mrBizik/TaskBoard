@@ -8,6 +8,7 @@
   "requires": [
     "font-awesome"
   ],
+  "locale": "ru",
 
   "builds": {
     "desktop": {
@@ -23,7 +24,7 @@
   },
 
   "classpath": ["app/shared/src","app/${build.id}/src"],
-  "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
+  "overrides": ["app/shared/overrides","app/${build.id}/overrides", "app/locale/${app.locale}"],
 
   "sass": {
     "namespace": "TaskBoard",
