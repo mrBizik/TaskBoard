@@ -1,24 +1,37 @@
+$alpha-color: .6;
+
 .task-priority-must {
-    background-color: red;
+    background-color: rgba(198, 40, 40, $alpha-color);
 }
 
 .task-priority-should {
-    background-color: yellow;
+    background-color: rgba(244, 244, 38, $alpha-color);
 }
 
 .task-priority-could {
-    background-color: green;
+    background-color: rgba(124, 179, 66, $alpha-color);
 }
 
 .boardview-item-task-wrap {
     border-radius: 5px;
+    height: 5vh;
+    margin: 5px;
 }
 
 .item-task-base-info {
     padding: 5px;
-    margin: 5px;
+}
+
+.item-task-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .task-selected > .boardview-item-task-wrap {
     background-color: $base-color !important;
+}
+
+.item-task-id {
+    font-weight: 900;
 }

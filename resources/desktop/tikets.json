@@ -2,7 +2,7 @@
     "items": [
         {
             "id": "TSK-0001",
-            "name": "Task 1",
+            "name": "Note: Through most of the guide we advocate for the use of sencha app watch to build your application incrementally as changes are made to both the application and the custom theme. However, the $include- variables are all set to true in development (which is the environment sencha app watch operates within). In order to test your theme's use of $include- variable checks you'll need to build your application for testing or production:",
             "firstName": "baturin",
             "secondName": "ilya",
             "status": "PLAN",
