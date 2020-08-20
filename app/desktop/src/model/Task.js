@@ -52,7 +52,13 @@ Ext.define('TaskBoard.model.Task', {
         },
     ],
     validators: {
-        id: 'presence',
+        id: [
+            'presence',
+            {
+                type: 'format',
+                matcher: /TSK\-+[0-9]/,
+            }
+        ],
         name: 'presence',
         status: [
             'presence',
