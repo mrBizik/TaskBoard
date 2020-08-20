@@ -24,26 +24,26 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
 
     updateStore: function(newStore, oldStore) {
         const me = this;
-        me.getTiketView().setStore(newStore);
+        me.getTaskView().setStore(newStore);
         me.setTitle(newStore.getStatus());
     },
 
     deselectAll: function() {
         const me = this;
-        const tiketView = me.getTiketView();
-        tiketView.getSelectionModel().deselectAll();
+        const taskView = me.getTaskView();
+        taskView.getSelectionModel().deselectAll();
     },
 
     privates: {
-        getTiketView: function() {
-            return this.getReferences()['tiketview'];
+        getTaskView: function() {
+            return this.getReferences()['taskview'];
         },
 
         createDataViewConfig: function(store, selectionModel) {
             return {
                 xtype: 'dataview',
                 height: '100%',
-                reference: 'tiketview',
+                reference: 'taskview',
                 plugins: ['boardcolumndragdrop'],
                 itemTpl: new Ext.XTemplate(
                     '<div class="boardview-item-task-wrap task-priority-{priorityType}">',
@@ -57,7 +57,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
                 store: store,
                 listeners: {
                     select: 'onSelectRecord',
-                    tiketdrop: 'onTiketDrop'
+                    taskdrop: 'onTaskDrop'
                 },
             };
         },

@@ -59,7 +59,7 @@ Ext.define('TaskBoard.view.board.column.plugin.DragDrop', {
         },
 
         onNodeDrop: function(data) {
-            this.dataview.fireEvent('tiketdrop', this.dataview, data);
+            this.dataview.fireEvent('taskdrop', this.dataview, data);
         },
     }
 });

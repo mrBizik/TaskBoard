@@ -73,9 +73,9 @@ Ext.define('TaskBoard.view.main.MainView', {
           ],
         },
         {
-          xtype: 'tiketview',
+          xtype: 'taskview',
           bind: {
-            tiket: '{selectedTask}',
+            task: '{selectedTask}',
           },
         }
       ],
