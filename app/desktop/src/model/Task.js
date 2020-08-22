@@ -40,16 +40,6 @@ Ext.define('TaskBoard.model.Task', {
                 return priorityOrder.indexOf(data.priority);
             },
         },
-        {
-            name: 'priorityType',
-            depends: 'priority',
-            calculate: (data)  => data.priority.toLowerCase(),
-        },
-        {
-            name: 'dateString',
-            depends: 'date',
-            calculate: (data) => Ext.Date.format(data.date, 'Y-m-d H:i'),
-        },
     ],
     validators: {
         id: [

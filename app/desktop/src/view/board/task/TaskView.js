@@ -20,7 +20,7 @@ Ext.define('TaskBoard.view.board.task.TaskView', {
                     '<div class="task-priority"><span class="info-label">{priorityLabel}:</span> {task.priority}</div>',
                 '</div>',
                 '<div class="task-user-date-info">',
-                    '<div class="task-date"><span class="info-label">{dateCreatedLabel}:</span> {task.dateString}</div>',
+                    '<div class="task-date"><span class="info-label">{dateCreatedLabel}:</span> {[Ext.Date.format(values.task.date, "Y-m-d H:i")]}</div>',
                     '<div class="task-user-name"><span class="info-label">{ownerLabel}:</span> {task.firstName} {task.secondName}</div>',
                 '</div>',
             '</div>',

@@ -46,7 +46,7 @@ Ext.define('TaskBoard.view.board.column.ColumnView', {
                 reference: 'taskview',
                 plugins: ['boardcolumndragdrop'],
                 itemTpl: new Ext.XTemplate(
-                    '<div class="boardview-item-task-wrap task-priority-{priorityType}">',
+                    '<div class="boardview-item-task-wrap task-priority-{[values.priority.toLowerCase()]}">',
                     '<div class="item-task-base-info">',
                     '<div class="item-task-id">{id}</div>',
                     '<div class="item-task-name">{name}</div>',
