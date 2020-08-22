@@ -10,7 +10,7 @@ Ext.define('TaskBoard.store.TaskStore', {
 		url: '/resources/desktop/tikets.json',
 		reader: {
             type: 'json',
-			rootProperty: 'items'
+			rootProperty: 'items',
 		}
 	}
 });

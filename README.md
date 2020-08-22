@@ -14,3 +14,5 @@
 ## Запуск приложения
 
 ```npm run start```
+
+Список тасков ```resources/desktop/tikets.json```
